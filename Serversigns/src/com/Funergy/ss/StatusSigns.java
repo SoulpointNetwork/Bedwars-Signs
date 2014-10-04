@@ -48,12 +48,12 @@ public class StatusSigns extends JavaPlugin implements Listener {
                
         
              
-                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),277,101,53), 1));
-                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),278,101,53), 2));
-                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),279,101,53), 3));
-                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),277,100,53), 4));
-                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),278,100,53), 5));
-                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),279,100,53), 6));
+                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),303,101,77), 1));
+                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),303,101,78), 2));
+                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),303,101,79), 3));
+                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),303,100,77), 4));
+                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),303,100,78), 5));
+                signs.add(new StatusSign(new Location(Bukkit.getWorld("world"),303,100,79), 6));
 
                 for (StatusSign s : signs) {
 					chunks.add(s.getLocation().getBlock().getChunk());

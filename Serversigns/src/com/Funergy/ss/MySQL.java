@@ -14,7 +14,7 @@ public class MySQL {
 	}
 	 public void setupDB() throws SQLException {
   
-      connection.executeUpdate("CREATE TABLE IF NOT EXISTS `SGservers`(`ID` integer,`NAME` varchar(100),`MAP` varchar(100),`PLAYERC` integer,`MAXP` integer,`STATE` varchar(100))");
+      connection.executeUpdate("CREATE TABLE IF NOT EXISTS `BWservers`(`ID` integer,`NAME` varchar(100),`MAP` varchar(100),`PLAYERC` integer,`MAXP` integer,`STATE` varchar(100))");
 
  
 	 }
@@ -22,7 +22,7 @@ public class MySQL {
        public Integer getpc(int ID){
     	   
     	        try {
-    	                ResultSet result = connection.select("select PLAYERC from SGservers where ID='" +ID + "'");    	               
+    	                ResultSet result = connection.select("select PLAYERC from BWservers where ID='" +ID + "'");    	               
     	                if (result.next()) {
     	                        return result.getInt("PLAYERC");
     	                } else {
@@ -36,7 +36,7 @@ public class MySQL {
        public Integer getmp(int ID){
     	   
 	        try {
-	                ResultSet result = connection.select("select MAXP from SGservers where ID='" +ID + "'");
+	                ResultSet result = connection.select("select MAXP from BWservers where ID='" +ID + "'");
 	               
 	                if (result.next()) {
 	                        return result.getInt("MAXP");
@@ -51,7 +51,7 @@ public class MySQL {
        public String getstate(int ID){
     	   
   	        try {
-  	                ResultSet result = connection.select("select STATE from SGservers where ID='" +ID + "'");
+  	                ResultSet result = connection.select("select STATE from BWservers where ID='" +ID + "'");
   	               
   	                if (result.next()) {
   	                        return result.getString("STATE");
@@ -66,7 +66,7 @@ public class MySQL {
        public String getmap(int ID){
     	   
  	        try {
- 	                ResultSet result = connection.select("select MAP from SGservers where ID='" +ID + "'");
+ 	                ResultSet result = connection.select("select MAP from BWservers where ID='" +ID + "'");
  	               
  	                if (result.next()) {
  	                        return result.getString("MAP");
@@ -81,7 +81,7 @@ public class MySQL {
        public String getname(int ID){
     	   
 	        try {
-	                ResultSet result = connection.select("select NAME from SGservers where ID='" +ID + "'");
+	                ResultSet result = connection.select("select NAME from BWservers where ID='" +ID + "'");
 	               
 	                if (result.next()) {
 	                        return result.getString("NAME");
@@ -94,7 +94,7 @@ public class MySQL {
 	        }
 	    }
        public void delete(int ID){
-        connection.query("DELETE FROM SGservers WHERE ID='"+ID+"'");
+        connection.query("DELETE FROM BWservers WHERE ID='"+ID+"'");
        }
 
        public void closeconnection(){

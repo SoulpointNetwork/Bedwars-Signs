@@ -72,7 +72,7 @@ public class StatusSign {
                   if(mysql.getpc(getID()) != mysql.getmp(getID())){
                   if(!(mysql.getpc(getID()) > mysql.getmp(getID())-4)){
                    		  sign.setLine(0, ChatColor.BOLD+"["+ChatColor.GREEN+"Join"+ChatColor.BLACK+ChatColor.BOLD+"]");
-                   		  sign.setLine(1, ChatColor.BOLD+"Op-HG" );
+                   		  sign.setLine(1, ChatColor.BOLD+"Bedwars" );
                    	  }else{
                    		 sign.setLine(0, ChatColor.BOLD+"["+ChatColor.LIGHT_PURPLE+"Vip"+ChatColor.BLACK+ChatColor.BOLD+"]"); 
                    }
